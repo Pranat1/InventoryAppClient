@@ -9,7 +9,7 @@ import AddPlace from './components/AddPlace';
 import AddPerson from './components/AddPerson';
 
 const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql'
+    uri: 'https://protected-eyrie-19090.herokuapp.com/graphql'
 })
 
 // components
