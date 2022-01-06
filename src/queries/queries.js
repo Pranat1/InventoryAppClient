@@ -113,6 +113,7 @@ const getItemQuery = gql`
         item(id: $id) {
             id
             name
+            unit
             PurchaseData{
                 quantity
                 pricePer
@@ -147,6 +148,7 @@ const getPlaceQuery = gql`
             thisPlaceEntries{
                 item{
                     name
+                    unit
                 }
                 quantity
             }

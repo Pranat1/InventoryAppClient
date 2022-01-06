@@ -15,18 +15,19 @@ class PlaceDetails extends Component {
         const { place } = this.props.data;
         if(place){
             return(
-                <table>
-                    <h2>{ place.name }</h2>
+                <div>
+                    <h2 className ="red-text text-center">{ place.name }</h2>
 
-                    <p> Total quantity at this place ={this.totalQuantity(place)}</p>
-                    <p>All Purcheases/Transfers Of the Item:</p>
-                    <table className="other-books">
-                        
+                    <h4 className="red-text text-center"> Total quantity at this place ={this.totalQuantity(place)}</h4>
+                    <h3 className="red-text text-center">All Purcheases/Transfers Of the Item:</h3>
+                    <table className="other-books table table-dark">
+                    <thead><tr><th>Quantity</th> <th>Item Name</th></tr></thead>
+
                         { place.thisPlaceEntries.map(Entrie => {
-                            return <tr key={Entrie.id}><th>{ "Quantity: " + Entrie.quantity }</th> <th>{"Entry Item Name: " +Entrie.item.name }</th></tr>
+                            return <tr key={Entrie.id}><th>{ Entrie.quantity +" "+ Entrie.item.unit}</th> <th>{Entrie.item.name }</th></tr>
                         })}
                     </table>
-                </table>
+                </div>
             );
         } else {
             return( <div>No book selected...</div> );

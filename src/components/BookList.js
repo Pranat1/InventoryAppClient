@@ -40,11 +40,11 @@ class BookList extends Component {
     displayBooks(){
         var data = this.props.data;
         if(data.loading){
-            return( <div>Loading books...</div> );
+            return( <div>Loading data...</div> );
         } else {
             return data.items.map(item => {
                 return(
-                    <li key={ item.id }><button onClick={ (e) => this.setState({ selected: item.id }) }>{ item.name + ": " + this.calculateStock(item.PurchaseData, item.EntryData) }</button></li>
+                    <button key={ item.id } class = "btn-default btn btn-block btn-primary"onClick={ (e) => this.setState({ selected: item.id }) }>{ item.name + ": " + this.calculateStock(item.PurchaseData, item.EntryData) }</button>
                 );
             })
         }
@@ -52,11 +52,11 @@ class BookList extends Component {
     displayPlacers(){
         var data = this.props.data;
         if(data.loading){
-            return( <div>Loading books...</div> );
+            return( <div>Loading data...</div> );
         } else {
             return data.places.map(place => {
                 return(
-                    <li key={ place.id }><button onClick={ (e) => this.setState({ selected1: place.id }) }>{ place.name }</button></li>
+                    <button  key={ place.id } class = "btn-default btn btn-block btn-primary" onClick={ (e) => this.setState({ selected1: place.id }) }>{ place.name }</button>
                 );
             })
         }
@@ -74,6 +74,7 @@ class BookList extends Component {
                 </ul>
                 <ul>
                     <ItemDetails itemId = {this.state.selected}/>
+                    <hr></hr>
                     <PlaceDetails placeId = {this.state.selected1}/>
                 </ul>
                 

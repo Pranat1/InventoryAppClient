@@ -35,11 +35,11 @@ class AddItem extends Component {
                     </h2>
                 <div className="field">
                     <label>Name:</label>
-                    <input type="text" onChange={ (e) => this.setState({ name: e.target.value }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ name: e.target.value }) }/>
                 </div>
                 <div className="field">
                     <label>Unit:</label>
-                    <input type="text" onChange={ (e) => this.setState({ unit: e.target.value }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ unit: e.target.value }) }/>
                 </div>
                 <button>+</button>
 

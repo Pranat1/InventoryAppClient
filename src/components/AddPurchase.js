@@ -52,27 +52,27 @@ class AddPurchase extends Component {
         return(
             <form id="add-book" onSubmit={ this.submitForm.bind(this)}>
                 <h2>
-                    Add Purchase/Transfer
+                    Add Purchase/Transfer Received
                 </h2>
                 <div className="field">
                     <label>Bill Number:</label>
-                    <input type="text" onChange={ (e) => this.setState({ billNumber: e.target.value }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ billNumber: e.target.value }) }/>
                 </div>
                 <div className="field">
                     <label>Price:</label>
-                    <input type="text" onChange={ (e) => this.setState({ pricePer: parseInt(e.target.value) }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ pricePer: parseInt(e.target.value) }) }/>
                 </div>
                 <div className="field">
                     <label>Date:</label>
-                    <input type="text" onChange={ (e) => this.setState({ date: e.target.value }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ date: e.target.value }) }/>
                 </div>
                 <div className="field">
                     <label>Time:</label>
-                    <input type="text" onChange={ (e) => this.setState({ time: e.target.value }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ time: e.target.value }) }/>
                 </div>
                 <div className="field">
                     <label>Item Quantity:</label>
-                    <input type="text" onChange={ (e) => this.setState({ quantity: parseInt(e.target.value) }) }/>
+                    <input className="form-control" type="text" onChange={ (e) => this.setState({ quantity: parseInt(e.target.value) }) }/>
                 </div>
                 <div className="field">
                     <label>Item:</label>
